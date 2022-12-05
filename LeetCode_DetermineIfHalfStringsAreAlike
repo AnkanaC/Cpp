@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int Count(string str)
+        {
+            int i,count=0;
+            for(i=0;i<str.length();i++)
+            {
+                if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U')
+                    count++;
+            }
+            return count;
+        }
+    bool halvesAreAlike(string s) 
+    {
+        int mid=s.length()/2;
+        string a=s.substr(0,mid);
+        string b=s.substr(mid,s.length());
+        if(Count(a)==Count(b))
+            return true;
+        else
+            return false;
+    }
+};
